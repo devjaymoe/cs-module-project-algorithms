@@ -4,10 +4,24 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    # list to hold answeres
+    answers = []
+    multiplyer = 1
+    # for loop to go over given array
+    for index in range(len(arr)):
+        # left side
+        left = arr[0:index]
+        for x in left:
+            multiplyer = multiplyer * x
+        right = arr[index + 1:len(arr)]
+        for y in right:
+            multiplyer = multiplyer * y
 
-    pass
+        answers.append(multiplyer)
+        multiplyer = 1
 
-
+    return answers
+        
 if __name__ == '__main__':
     # Use the main function to test your implementation
     # arr = [1, 2, 3, 4, 5]
