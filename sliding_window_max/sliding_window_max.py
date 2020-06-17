@@ -4,8 +4,22 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    answers = []
+    sub_Array = [0] * k
+    iterations = 0
 
-    pass
+    for i in range(len(nums) - k + 1):
+        iterations = i
+        sub_Array_index = 0
+        sub_Array = [0] * k
+
+        for sub_index in range(len(sub_Array)):
+            sub_Array[sub_index] = nums[iterations]
+            iterations += 1
+
+        answers.append(max(sub_Array))
+
+    return answers
 
 
 if __name__ == '__main__':
