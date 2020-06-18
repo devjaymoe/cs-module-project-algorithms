@@ -15,7 +15,6 @@ def moving_zeroes(arr):
 
     return numbers + zeros
 
-
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
     arr = [0, 3, 1, 0, -2]
